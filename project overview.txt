@@ -1,0 +1,15 @@
+front end 
+1]Material UI
+2]Typescript
+3]Vite
+4]Recharts
+5]Redux Toolkit
+6]RTK Query
+7]Heroicons
+8]React Routers
+
+Back end
+1]Node Js
+2]Express JS
+3]mongoose
+4]regression js 
