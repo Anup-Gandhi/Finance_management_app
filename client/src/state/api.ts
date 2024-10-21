@@ -3,7 +3,7 @@ import {
   GetKpisResponse,
   GetProductsResponse,
   GetTransactionsResponse,
-} from "./types";
+} from "./types.ts";
 
 export const api = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_BASE_URL }),
