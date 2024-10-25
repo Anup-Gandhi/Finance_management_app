@@ -1,6 +1,7 @@
 import BoxHeader from "@/components/BoxHeader";
 import DashboardBox from "@/components/DashboardBox";
 import FlexBetween from "@/components/FlexBetween";
+import { Link } from "react-router-dom";
 import {
   useGetKpisQuery,
   useGetProductsQuery,
@@ -87,7 +88,21 @@ const Row3 = () => {
 
   return (
     <>
-      <DashboardBox gridArea="g">
+      <DashboardBox
+        gridArea="g"
+        component={Link}
+        to="/products"
+        style={{
+          textDecoration: "none",
+          color: "inherit",
+          transition: "background-color 0.3s ease", // Transition for smooth hover effect
+        }}
+        sx={{
+          "&:hover": {
+            backgroundColor: palette.primary[700], // Change the background on hover
+          },
+        }}
+      >
         <BoxHeader
           title="List of Products"
           sideText={`${productData?.length} products`}

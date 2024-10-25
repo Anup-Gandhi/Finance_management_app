@@ -2,11 +2,15 @@ import { Box } from "@mui/material";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { useMemo } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";  // Removed duplicate imports
 import { themeSettings } from "./theme";
 import Navbar from "@/scenes/navbar";
 import Dashboard from "@/scenes/dashboard";
 import Predictions from "@/scenes/predictions";
+import Products from "@/scenes/separate/products";  // Ensure the correct import
+// import Orders from "@/scenes/separate/orders";      // Import Orders component
+// import ExpenseBreakdown from "@/scenes/separate/expenses";  
+
 function App() {
   const theme = useMemo(() => createTheme(themeSettings), []);  return (
     <div className="app">
@@ -20,6 +24,9 @@ function App() {
               <Route
                path="/predictions"
                element={<Predictions/>} />
+               <Route path="/products" element={<Products />} />
+        {/* <Route path="/orders" element={<Orders />} />
+        <Route path="/expenses" element={<ExpenseBreakdown />} /> */}
             </Routes>
             </Box>
         </ThemeProvider>
