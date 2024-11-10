@@ -15,7 +15,9 @@ const Navbar = (props: Props) => {
       <FlexBetween gap="0.75rem">
         <PixIcon sx={{ fontSize: "28px" }} />
         <Typography variant="h4" fontSize="16px">
-          Finanseer
+        <Link to="" style={{ textDecoration: 'none', color: 'inherit' }}>
+            Finanseer
+          </Link>
         </Typography>
       </FlexBetween>
 

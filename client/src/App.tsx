@@ -10,6 +10,7 @@ import Predictions from "@/scenes/predictions";
 import Products from "@/scenes/separate/products";
  import Orders from "@/scenes/separate/orders";      
  import ExpenseBreakdown from "@/scenes/separate/expenses";  
+ import SummaryPage from "@/scenes/separate/SummaryPage";
 
 function App() {
   const theme = useMemo(() => createTheme(themeSettings), []);  return (
@@ -27,6 +28,7 @@ function App() {
                <Route path="/products" element={<Products />} />
               <Route path="/orders" element={<Orders />} />
               <Route path="/expenses" element={<ExpenseBreakdown />} />
+              <Route path="/summary" element={<SummaryPage />} />
             </Routes>
             </Box>
         </ThemeProvider>

@@ -3,7 +3,7 @@ import React, { useMemo } from "react";
 import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid, GridCellParams } from "@mui/x-data-grid";
 import { Cell, Pie, PieChart } from "recharts";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; // For creating navigation links
 import BoxHeader from "@/components/BoxHeader";
 import DashboardBox from "@/components/DashboardBox";
 import FlexBetween from "@/components/FlexBetween";
@@ -91,6 +91,7 @@ const Row3 = () => {
 
   return (
     <>
+      {/* Link to Products Page */}
       <DashboardBox
         gridArea="g"
         component={Link}
@@ -139,6 +140,8 @@ const Row3 = () => {
           />
         </Box>
       </DashboardBox>
+
+      {/* Link to Orders Page */}
       <DashboardBox
         gridArea="h"
         component={Link}
@@ -187,7 +190,23 @@ const Row3 = () => {
           />
         </Box>
       </DashboardBox>
-      <DashboardBox gridArea="i">
+
+      {/* Link to Expense Breakdown Page */}
+      <DashboardBox
+        gridArea="i"
+        component={Link}
+        to="/expenses"
+        style={{
+          textDecoration: "none",
+          color: "inherit",
+          transition: "background-color 0.3s ease",
+        }}
+        sx={{
+          "&:hover": {
+            backgroundColor: palette.primary[700],
+          },
+        }}
+      >
         <BoxHeader title="Expense Breakdown By Category" sideText=" " />
         <FlexBetween mt="0.5rem" gap="0.5rem" p="0 1rem" textAlign="center">
           {pieChartData?.map((data, i) => (
@@ -211,30 +230,32 @@ const Row3 = () => {
           ))}
         </FlexBetween>
       </DashboardBox>
-      <DashboardBox gridArea="j">
+
+      {/* Link to Summary and Explanation Page */}
+      <DashboardBox
+        gridArea="j"
+        component={Link}
+        to="/summary" // Link to the new Summary and Explanation page
+        style={{
+          textDecoration: "none",
+          color: "inherit",
+          transition: "background-color 0.3s ease",
+        }}
+        sx={{
+          "&:hover": {
+            backgroundColor: palette.primary[700],
+          },
+        }}
+      >
         <BoxHeader
-          title="Overall Summary and Explanation Data"
-          sideText="+15%"
+          title="Summary and Explanation"
+          sideText="Edit/Update"
         />
-        <Box
-          height="15px"
-          margin="1.25rem 1rem 0.4rem 1rem"
-          bgcolor={palette.primary[800]}
-          borderRadius="1rem"
-        >
-          <Box
-            height="15px"
-            bgcolor={palette.primary[600]}
-            borderRadius="1rem"
-            width="40%"
-          ></Box>
+        <Box>
+          <Typography variant="h6">
+            Add your summary and explanation for the data here.
+          </Typography>
         </Box>
-        <Typography margin="0 1rem" variant="h6">
-          Orci aliquam enim vel diam. Venenatis euismod id donec mus lorem etiam
-          ullamcorper odio sed. Ipsum non sed gravida etiam urna egestas
-          molestie volutpat et. Malesuada quis pretium aliquet lacinia ornare
-          sed. In volutpat nullam at est id cum pulvinar nunc.
-        </Typography>
       </DashboardBox>
     </>
   );

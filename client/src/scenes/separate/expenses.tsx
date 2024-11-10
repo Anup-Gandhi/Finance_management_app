@@ -33,6 +33,14 @@ const ExpenseBreakdown = () => {
     }
     return [];
   }, [kpiData]);
+  const BoxHeader = ({ title, sideText, titleSize = "h3", sideTextSize = "body1" }) => {
+    return (
+      <Box display="flex" justifyContent="space-between" alignItems="center">
+        <Typography variant={titleSize}>{title}</Typography>
+        <Typography variant={sideTextSize} color="primary">{sideText}</Typography>
+      </Box>
+    );
+  };
 
   return (
     <Box display="flex" flexDirection="column" padding="2rem">
@@ -60,7 +68,7 @@ const ExpenseBreakdown = () => {
               </Pie>
               <Tooltip formatter={(value) => `$${value}`} />
             </PieChart>
-            <Typography variant="h6" color="textPrimary" mt="0.5rem">
+            <Typography variant="h3" color="white" mt="0.5rem">
               {data[0].name} ({data[0].percentage})
             </Typography>
           </Box>
