@@ -95,11 +95,11 @@ const Row3 = () => {
         style={{
           textDecoration: "none",
           color: "inherit",
-          transition: "background-color 0.3s ease", // Transition for smooth hover effect
+          transition: "background-color 0.3s ease",
         }}
         sx={{
           "&:hover": {
-            backgroundColor: palette.primary[700], // Change the background on hover
+            backgroundColor: palette.primary[700],
           },
         }}
       >
@@ -136,7 +136,21 @@ const Row3 = () => {
           />
         </Box>
       </DashboardBox>
-      <DashboardBox gridArea="h">
+      <DashboardBox
+        gridArea="h"
+        component={Link}
+        to="/orders"
+        style={{
+          textDecoration: "none",
+          color: "inherit",
+          transition: "background-color 0.3s ease",
+        }}
+        sx={{
+          "&:hover": {
+            backgroundColor: palette.primary[700],
+          },
+        }}
+      >
         <BoxHeader
           title="Recent Orders"
           sideText={`${transactionData?.length} latest transactions`}

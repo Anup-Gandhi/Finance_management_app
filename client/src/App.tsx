@@ -7,9 +7,9 @@ import { themeSettings } from "./theme";
 import Navbar from "@/scenes/navbar";
 import Dashboard from "@/scenes/dashboard";
 import Predictions from "@/scenes/predictions";
-import Products from "@/scenes/separate/products";  // Ensure the correct import
-// import Orders from "@/scenes/separate/orders";      // Import Orders component
-// import ExpenseBreakdown from "@/scenes/separate/expenses";  
+import Products from "@/scenes/separate/products";
+ import Orders from "@/scenes/separate/orders";      
+ import ExpenseBreakdown from "@/scenes/separate/expenses";  
 
 function App() {
   const theme = useMemo(() => createTheme(themeSettings), []);  return (
@@ -25,8 +25,8 @@ function App() {
                path="/predictions"
                element={<Predictions/>} />
                <Route path="/products" element={<Products />} />
-        {/* <Route path="/orders" element={<Orders />} />
-        <Route path="/expenses" element={<ExpenseBreakdown />} /> */}
+              <Route path="/orders" element={<Orders />} />
+              <Route path="/expenses" element={<ExpenseBreakdown />} />
             </Routes>
             </Box>
         </ThemeProvider>
