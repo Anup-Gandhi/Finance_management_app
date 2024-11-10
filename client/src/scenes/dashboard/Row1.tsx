@@ -1,5 +1,6 @@
 import BoxHeader from "@/components/BoxHeader";
 import DashboardBox from "@/components/DashboardBox";
+import { Link } from "react-router-dom";
 import { useGetKpisQuery } from "@/state/api";
 import { useTheme } from "@mui/material";
 import { useMemo } from "react";
@@ -62,7 +63,20 @@ const Row1 = () => {
 
   return (
     <>
-      <DashboardBox gridArea="a">
+      <DashboardBox gridArea="a" 
+                  component={Link}
+                  to="/revenue"
+                  style={{
+                    textDecoration: "none",
+                    color: "inherit",
+                    transition: "background-color 0.3s ease",
+                  }}
+                  sx={{
+                    "&:hover": {
+                      backgroundColor: palette.primary[900],
+                    },
+                  }}
+                  >
         <BoxHeader
           title="Revenue and Expenses"
           subtitle="top line represents revenue, bottom line represents expenses"
@@ -137,7 +151,19 @@ const Row1 = () => {
           </AreaChart>
         </ResponsiveContainer>
       </DashboardBox>
-      <DashboardBox gridArea="b">
+      <DashboardBox gridArea="b"
+                        component={Link}
+                        to="/profit"
+                        style={{
+                          textDecoration: "none",
+                          color: "inherit",
+                          transition: "background-color 0.3s ease",
+                        }}
+                        sx={{
+                          "&:hover": {
+                            backgroundColor: palette.primary[900],
+                          },
+                        }}>
         <BoxHeader
           title="Profit and Revenue"
           subtitle="top line represents revenue, bottom line represents expenses"
@@ -196,7 +222,20 @@ const Row1 = () => {
           </LineChart>
         </ResponsiveContainer>
       </DashboardBox>
-      <DashboardBox gridArea="c">
+      <DashboardBox gridArea="c"
+                        component={Link}
+                        to="/month"
+                        style={{
+                          textDecoration: "none",
+                          color: "inherit",
+                          transition: "background-color 0.3s ease",
+                        }}
+                        sx={{
+                          "&:hover": {
+                            backgroundColor: palette.primary[900],
+                          },
+                        }}
+        >
         <BoxHeader
           title="Revenue Month by Month"
           subtitle="graph representing the revenue month by month"

@@ -2,6 +2,7 @@ import BoxHeader from "@/components/BoxHeader";
 import DashboardBox from "@/components/DashboardBox";
 import FlexBetween from "@/components/FlexBetween";
 import { useGetKpisQuery, useGetProductsQuery } from "@/state/api";
+import { Link } from "react-router-dom";
 import { Box, Typography, useTheme } from "@mui/material";
 import React, { useMemo } from "react";
 import {
@@ -61,7 +62,20 @@ const Row2 = () => {
 
   return (
     <>
-      <DashboardBox gridArea="d">
+      <DashboardBox gridArea="d"
+      component={Link}
+      to="/operation"
+      style={{
+        textDecoration: "none",
+        color: "inherit",
+        transition: "background-color 0.3s ease",
+      }}
+      sx={{
+        "&:hover": {
+          backgroundColor: palette.primary[900],
+        },
+      }}
+      >
         <BoxHeader
           title="Operational vs Non-Operational Expenses"
           sideText=" "
@@ -159,7 +173,20 @@ const Row2 = () => {
           </Box>
         </FlexBetween>
       </DashboardBox>
-      <DashboardBox gridArea="f">
+      <DashboardBox gridArea="f"
+            component={Link}
+            to="/price-vs-expenses"
+            style={{
+              textDecoration: "none",
+              color: "inherit",
+              transition: "background-color 0.3s ease",
+            }}
+            sx={{
+              "&:hover": {
+                backgroundColor: palette.primary[900],
+              },
+            }}
+            >
         <BoxHeader title="Product Prices vs Expenses" sideText=" " />
         <ResponsiveContainer width="100%" height="100%">
           <ScatterChart

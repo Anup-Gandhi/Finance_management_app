@@ -103,7 +103,7 @@ const Row3 = () => {
         }}
         sx={{
           "&:hover": {
-            backgroundColor: palette.primary[700],
+            backgroundColor: palette.primary[900],
           },
         }}
       >
@@ -153,7 +153,7 @@ const Row3 = () => {
         }}
         sx={{
           "&:hover": {
-            backgroundColor: palette.primary[700],
+            backgroundColor: palette.primary[900],
           },
         }}
       >
@@ -203,7 +203,7 @@ const Row3 = () => {
         }}
         sx={{
           "&:hover": {
-            backgroundColor: palette.primary[700],
+            backgroundColor: palette.primary[900],
           },
         }}
       >
@@ -243,7 +243,7 @@ const Row3 = () => {
         }}
         sx={{
           "&:hover": {
-            backgroundColor: palette.primary[700],
+            backgroundColor: palette.primary[900],
           },
         }}
       >

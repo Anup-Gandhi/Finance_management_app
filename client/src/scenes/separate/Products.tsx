@@ -11,7 +11,7 @@ interface Product {
   transactions: string[]; // Array of transaction IDs
 }
 
-const ProductsPage = () => {
+const Products = () => {
   const { palette } = useTheme();
   const { data: productData, isLoading, error } = useGetProductsQuery();
   console.log("Product Data: ", productData);
@@ -109,4 +109,4 @@ const ProductsPage = () => {
   );
 };
 
-export default ProductsPage;
+export default Products;
