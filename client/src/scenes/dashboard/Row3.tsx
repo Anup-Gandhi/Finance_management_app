@@ -1,16 +1,17 @@
+// src/components/Row3.tsx
+import React, { useMemo } from "react";
+import { Box, Typography, useTheme } from "@mui/material";
+import { DataGrid, GridCellParams } from "@mui/x-data-grid";
+import { Cell, Pie, PieChart } from "recharts";
+import { Link } from "react-router-dom";
 import BoxHeader from "@/components/BoxHeader";
 import DashboardBox from "@/components/DashboardBox";
 import FlexBetween from "@/components/FlexBetween";
-import { Link } from "react-router-dom";
 import {
   useGetKpisQuery,
   useGetProductsQuery,
   useGetTransactionsQuery,
 } from "@/state/api";
-import { Box, Typography, useTheme } from "@mui/material";
-import { DataGrid, GridCellParams } from "@mui/x-data-grid";
-import React, { useMemo } from "react";
-import { Cell, Pie, PieChart } from "recharts";
 
 const Row3 = () => {
   const { palette } = useTheme();
@@ -20,11 +21,13 @@ const Row3 = () => {
   const { data: productData } = useGetProductsQuery();
   const { data: transactionData } = useGetTransactionsQuery();
 
+  // Process pie chart data while filtering out 0% expense categories
   const pieChartData = useMemo(() => {
     if (kpiData) {
       const totalExpenses = kpiData[0].totalExpenses;
-      return Object.entries(kpiData[0].expensesByCategory).map(
-        ([key, value]) => {
+      return Object.entries(kpiData[0].expensesByCategory)
+        .filter(([, value]) => value > 0) // Filter out categories with 0% expense
+        .map(([key, value]) => {
           return [
             {
               name: key,
@@ -35,9 +38,9 @@ const Row3 = () => {
               value: totalExpenses - value,
             },
           ];
-        }
-      );
+        });
     }
+    return [];
   }, [kpiData]);
 
   const productColumns = [
