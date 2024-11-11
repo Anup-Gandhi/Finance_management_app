@@ -7,7 +7,7 @@ import { themeSettings } from "./theme";
 import Navbar from "@/scenes/navbar";
 import Dashboard from "@/scenes/dashboard";
 import Predictions from "@/scenes/predictions";
-import Products from "@/scenes/separate/products";
+import Products from "./scenes/separate/Products";
 import Revenue from "./scenes/separate/revenue";
 import Profit from "./scenes/separate/profit";
 import Operation from "@/scenes/separate/operation";

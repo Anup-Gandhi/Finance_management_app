@@ -265,7 +265,7 @@ const Row3 = () => {
           ></Box>
         </Box>
         <Typography margin="0 1rem" variant="h6">
-        Finanseer provides a clear financial overview, tracking revenue, expenses, and profit trends. The dashboard highlights operational vs. non-operational expenses, product pricing insights, and campaign targets. With detailed tables on products and recent transactions, plus categorized expenses, Finanseer enables efficient, data-driven financial management and strategic planning for companies.
+        Finanseer offers a comprehensive financial overview, tracking revenue, expenses, profit, and product pricing. It includes detailed transaction data, expense categories, and campaign targets, empowering data-driven financial management and strategic planning.
         </Typography>
       </DashboardBox>
     </>
