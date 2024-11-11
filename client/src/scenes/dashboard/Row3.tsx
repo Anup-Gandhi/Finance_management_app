@@ -251,11 +251,22 @@ const Row3 = () => {
           title="Summary and Explanation"
           sideText="Edit/Update"
         />
-        <Box>
-          <Typography variant="h6">
-            Add your summary and explanation for the data here.
-          </Typography>
+        <Box
+          height="15px"
+          margin="1.25rem 1rem 0.4rem 1rem"
+          bgcolor={palette.primary[800]}
+          borderRadius="1rem"
+        >
+          <Box
+            height="15px"
+            bgcolor={palette.primary[600]}
+            borderRadius="1rem"
+            width="40%"
+          ></Box>
         </Box>
+        <Typography margin="0 1rem" variant="h6">
+        Finanseer provides a clear financial overview, tracking revenue, expenses, and profit trends. The dashboard highlights operational vs. non-operational expenses, product pricing insights, and campaign targets. With detailed tables on products and recent transactions, plus categorized expenses, Finanseer enables efficient, data-driven financial management and strategic planning for companies.
+        </Typography>
       </DashboardBox>
     </>
   );
