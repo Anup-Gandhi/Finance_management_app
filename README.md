@@ -29,7 +29,3 @@ A finance dashboard app developed using the MERN stack, featuring machine learni
 - **ML Integration:** Integrated machine learning models to provide finance-based predictions, enhancing the app’s functionality.
 - **Charts & Visualizations:** Designed and developed interactive charts with Recharts to display financial data dynamically.
   
-## Installation & Setup:
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/personalized-finance-app.git
